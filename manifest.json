@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Bovada Golf Bet Logger",
+  "version": "1.0",
+  "description": "Logs golf futures bets from Bovada bet history to CSV.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.bovada.lv/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.bovada.lv/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
